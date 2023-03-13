@@ -14,7 +14,7 @@ import jakarta.persistence.SequenceGenerator;
 public class Artikl implements Serializable {
 
 	/**
-	 * proba
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	
