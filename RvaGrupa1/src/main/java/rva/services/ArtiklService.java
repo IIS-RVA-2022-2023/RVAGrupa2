@@ -31,6 +31,6 @@ public class ArtiklService {
 	}
 	
 	public List<Artikl> getAllArtiklBySlovo(String slovo){
-		return artiklRepository.findByPocetnoSlovo(slovo);
+		return artiklRepository.findByPocetnoSlovo(slovo.toLowerCase());
 	}
 }
