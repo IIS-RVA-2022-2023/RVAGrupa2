@@ -4,6 +4,10 @@ import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import jakarta.persistence.Entity;
@@ -37,8 +41,10 @@ public class Porudzbina implements Serializable {
 	
 	@ManyToOne
 	@JoinColumn(name = "dobavljac")
+	@OnDelete(action = OnDeleteAction.CASCADE)
 	private Dobavljac dobavljac;
 	
+	@JsonIgnore
 	@OneToMany(mappedBy = "porudzbina")
 	private List<StavkaPorudzbine> stavke;
 

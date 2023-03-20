@@ -2,6 +2,9 @@ package rva.model;
 
 import java.io.Serializable;
 
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
+
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import jakarta.persistence.Column;
@@ -39,10 +42,12 @@ public class StavkaPorudzbine implements Serializable {
 
 	@ManyToOne
 	@JoinColumn(name = "artikl")
+	@OnDelete(action = OnDeleteAction.CASCADE)
 	private Artikl artikl;
 
 	@ManyToOne
 	@JoinColumn(name = "porudzbina")
+	@OnDelete(action = OnDeleteAction.CASCADE)
 	private Porudzbina porudzbina;
 
 	public StavkaPorudzbine() {

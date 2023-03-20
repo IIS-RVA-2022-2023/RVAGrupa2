@@ -3,6 +3,7 @@ package rva.model;
 import java.io.Serializable;
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import jakarta.persistence.Entity;
@@ -30,6 +31,7 @@ public class Dobavljac implements Serializable {
 	private String adresa;
 	private String kontakt;
 
+	@JsonIgnore
 	@OneToMany(mappedBy = "dobavljac")
 	private List<Porudzbina> porudzbine;
 

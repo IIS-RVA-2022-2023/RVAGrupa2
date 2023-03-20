@@ -33,4 +33,16 @@ public class ArtiklService {
 	public List<Artikl> getAllArtiklBySlovo(String slovo){
 		return artiklRepository.findByPocetnoSlovo(slovo.toLowerCase());
 	}
+	
+	public boolean existsById(long id) {
+		return getArtiklById(id).isPresent();
+	}
+	
+	public Artikl addArtikl(Artikl artikl) {
+		return artiklRepository.save(artikl);
+	}
+	
+	public void deleteArtikl(long id) {
+		 artiklRepository.deleteById(id);
+	}
 }
