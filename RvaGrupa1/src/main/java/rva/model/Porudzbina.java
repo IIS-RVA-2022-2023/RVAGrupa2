@@ -31,7 +31,7 @@ public class Porudzbina implements Serializable {
 	@Id
 	@SequenceGenerator(name = "PORUDZBINA_SEQ_GENERATOR", sequenceName = "PORUDZBINA_SEQ", allocationSize = 1)
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "PORUDZBINA_SEQ_GENERATOR")
-	private long id;
+	private int id;
 
 	private Date datum;
 
@@ -52,11 +52,11 @@ public class Porudzbina implements Serializable {
 
 	}
 
-	public long getId() {
+	public int getId() {
 		return id;
 	}
 
-	public void setId(long id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 
