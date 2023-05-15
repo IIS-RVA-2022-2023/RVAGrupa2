@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ArtiklComponent } from './components/artikl/artikl.component';
+import { DobavljacComponent } from './components/dobavljac/dobavljac.component';
 
-const routes: Routes =  [ { path: 'artikl', component: ArtiklComponent },/*   
-{ path: 'dobavljac', component: DobavljacComponent },
+const routes: Routes =  [ { path: 'artikl', component: ArtiklComponent },   
+{ path: 'dobavljac', component: DobavljacComponent },/*
 { path: 'porudzbina', component: PorudzbinaComponent },
 { path: 'home', component: HomeComponent },
 { path: 'about', component: AboutComponent },
