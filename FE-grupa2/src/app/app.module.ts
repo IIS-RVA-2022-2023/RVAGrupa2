@@ -16,11 +16,25 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTableModule } from '@angular/material/table';
+import { MatDialogModule } from '@angular/material/dialog';
+import { ArtiklDialogComponent } from './components/dialogs/artikl-dialog/artikl-dialog.component';
+import { DobavljacDialogComponent } from './components/dialogs/dobavljac-dialog/dobavljac-dialog.component';
+import { PorudzbinaDialogComponent } from './components/dialogs/porudzbina-dialog/porudzbina-dialog.component';
+import { StavkaPorudzbineDialogComponent } from './components/dialogs/stavka-porudzbine-dialog/stavka-porudzbine-dialog.component';
+import { DobavljacComponent } from './components/dobavljac/dobavljac.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ArtiklComponent
+    ArtiklComponent,
+    ArtiklDialogComponent,
+    DobavljacDialogComponent,
+    PorudzbinaDialogComponent,
+    StavkaPorudzbineDialogComponent,
+    DobavljacComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +50,11 @@ import { MatTableModule } from '@angular/material/table';
     HttpClientModule,
     MatToolbarModule,
     MatSnackBarModule,
-    MatTableModule
+    MatTableModule,
+    MatDialogModule,
+    MatFormFieldModule,
+    FormsModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]
