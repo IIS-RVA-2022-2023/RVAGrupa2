@@ -31,7 +31,7 @@ public class DobavljacService {
 	}
 	
 	public boolean existsById(long id) {
-		if(dobavljacRepository.findById(id) != null) {
+		if(!dobavljacRepository.findById(id).isEmpty()) {
 			return true;
 		}else {
 			return false;
