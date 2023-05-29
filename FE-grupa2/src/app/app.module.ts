@@ -25,6 +25,14 @@ import { DobavljacComponent } from './components/dobavljac/dobavljac.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatSelectModule } from '@angular/material/select';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatSortModule } from '@angular/material/sort';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { PorudzbinaComponent } from './components/porudzbina/porudzbina.component';
+import { StavkaPorudzbineComponent } from './components/stavka-porudzbine/stavka-porudzbine.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +42,9 @@ import { FormsModule } from '@angular/forms';
     DobavljacDialogComponent,
     PorudzbinaDialogComponent,
     StavkaPorudzbineDialogComponent,
-    DobavljacComponent
+    DobavljacComponent,
+    PorudzbinaComponent,
+    StavkaPorudzbineComponent
   ],
   imports: [
     BrowserModule,
@@ -54,7 +64,13 @@ import { FormsModule } from '@angular/forms';
     MatDialogModule,
     MatFormFieldModule,
     FormsModule,
-    MatInputModule
+    MatInputModule,
+    MatDatepickerModule,
+    MatCheckboxModule,
+    MatSelectModule,
+    MatNativeDateModule,
+    MatSortModule,
+    MatPaginatorModule
   ],
   providers: [],
   bootstrap: [AppComponent]
