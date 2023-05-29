@@ -17,7 +17,7 @@ export class PorudzbinaComponent {
   subscription!: Subscription;
   displayedColumns = ['id', 'datum', 'isporuceno', 'iznos', 'placeno', 'dobavljac', 'actions'];
   dataSource!: MatTableDataSource<Porudzbina>;
-  //selektovanaPorudzbina1!: Porudzbina;
+  selektovanaPorudzbina1!: Porudzbina;
   @ViewChild(MatSort, { static: false }) sort!: MatSort;
   @ViewChild(MatPaginator, { static: false }) paginator!: MatPaginator;
 
@@ -74,9 +74,9 @@ export class PorudzbinaComponent {
     })
   }
 
-  /*selectRow(row: any) {
+  selectRow(row: any) {
     this.selektovanaPorudzbina1 = row;
-  }*/
+  }
 
   applyFilter(filterValue: any) {
     filterValue = filterValue.target.value
